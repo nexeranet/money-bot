@@ -43,6 +43,8 @@ services:
     container_name: bot_back
     build:
       context: ./backend
+    volumes:
+      - ./backend:/app
     ports:
       - "8000:8000"
     networks:

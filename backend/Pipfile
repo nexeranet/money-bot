@@ -10,6 +10,7 @@ aiohttp = "*"
 aiohttp-jinja2 = "*"
 gunicorn = "*"
 uvloop = "*"
+uvicorn = "*"
 
 [requires]
 python_version = "3.7"
