@@ -6,3 +6,5 @@ db :
 	docker exec -it bot_db bash
 nginx :
 	docker exec -it bot_nginx  /bin/sh
+hook :
+	docker exec bot_back sh ./setwebhooks.sh
