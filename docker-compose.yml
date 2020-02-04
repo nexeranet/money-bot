@@ -58,12 +58,13 @@ services:
     container_name: bot_ngrok
     ports:
       - "4040:4040"
-    links:
-      - nginx_bot
     environment:
       - NGROK_AUTH=${NGROK_AUTH}
-      - NGROK_REGION=eu
+      - NGROK_REGION=${NGROK_REGION}
+      - NGROK_PROTOCOL=${NGROK_PROTOCOL}
       - NGROK_PORT=${NGROK_PORT}
+    networks:
+      - backend
 
 networks:
   backend:

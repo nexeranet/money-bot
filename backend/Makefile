@@ -8,3 +8,5 @@ nginx :
 	docker exec -it bot_nginx  /bin/sh
 hook :
 	docker exec bot_back sh ./setwebhooks.sh
+delh :
+	docker exec bot_back sh ./deletewebhook.sh
