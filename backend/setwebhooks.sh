@@ -1,4 +1,4 @@
-WEBHOOKS_URL=https://632a06b3.eu.ngrok.io
+WEBHOOKS_URL=https://74bcbb9e.eu.ngrok.io
 echo '\n############################# deleteWebhook ###################################'
 curl https://api.telegram.org/bot$TELEGRAM_TOKEN/deleteWebhook
 echo '\n############################ setWebhook ####################################'
