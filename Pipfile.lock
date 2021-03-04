@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "928494afd173a0b0a8319d3053bf24d59a112a4311419d657208a0ac230decda"
+            "sha256": "8b71da17a7186a7a89df3a10726a123c0e5fefa1969dc940f235ff37c5a346d4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,24 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "jedi": {
+            "hashes": [
+                "sha256:18456d83f65f400ab0c2d3319e48520420ef43b23a086fdc05dff34132f0fb93",
+                "sha256:92550a404bad8afed881a137ec9a461fed49eca661414be45059329614ed0707"
+            ],
+            "index": "pypi",
+            "version": "==0.18.0"
+        },
+        "parso": {
+            "hashes": [
+                "sha256:15b00182f472319383252c18d5913b69269590616c947747bc50bf4ac768f410",
+                "sha256:8519430ad07087d4c997fda3a7918f7cfa27cb58972a8c89c2a0295a1c940e9e"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==0.8.1"
+        }
+    },
     "develop": {
         "flake8": {
             "hashes": [
