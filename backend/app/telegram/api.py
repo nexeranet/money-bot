@@ -1,6 +1,7 @@
 import json
 from aiohttp.web import Response
 
+
 class Bot:
     """
     Base bot class
@@ -14,8 +15,8 @@ class Bot:
                 if en['type'] == 'bot_command':
                     print(en['type'])
 
-
         return Response(content_type='application/json',
+
                         status=200,
                         text=json.dumps(req['message'])
                         )

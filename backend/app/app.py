@@ -1,7 +1,9 @@
-from aiohttp import  web
+
+from aiohttp import web
 import jinja2
 import aiohttp_jinja2
 from .routes import setup_routes
+
 
 async def create_app():
     app = web.Application()
@@ -11,4 +13,3 @@ async def create_app():
     )
     setup_routes(app)
     return app
-
