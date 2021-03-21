@@ -1,5 +1,9 @@
 __pycache__/
 data/
+.vscode
+.venv
+.vim
+.idea
 .env
 ngrok
 ngrok_host.txt

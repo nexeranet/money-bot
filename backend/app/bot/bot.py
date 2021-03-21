@@ -1,7 +1,7 @@
 import json
 import os
 import aiohttp
-import asyncio
+
 from typing import Optional
 from aiohttp.web import Response
 from .handlers.handlers import Handlers
@@ -64,11 +64,9 @@ class Bot:
             chat_id: chat id user
             text: bot message
         """
-        # url = self.get_url('sendMessage')
         answer = {'chat_id': chat_id, 'text': text, 'parse_mode': 'HTML'}
         return await self.make_request(self.session, 'sendMessage',
                                        data=answer)
-        # return requests.post(url, json=answer)
 
     def register_handler(self, commands=None, regexp=None, content_type=None,
                          state=None):
@@ -79,10 +77,9 @@ class Bot:
 
     async def listen(self, request):
         req = await request.json()
-        message = Message(content=req['message'], bot=self)
-        await self.handlers.notify(message=message)
-        await self.sendMessage(req['message']['chat']['id'],
-                               req['message']['text'])
+        message = Message(content=req['message'], send_function=self.sendMessage)
+        state = await self.handlers.notify(message=message)
+        print(state)
         return Response(content_type='application/json',
                         status=200,
                         text=json.dumps(req['message'])

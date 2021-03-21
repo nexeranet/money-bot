@@ -3,6 +3,7 @@ import json
 from aiohttp.web import Response
 
 
+
 async def enterpoint(request):
     print(request)
     return Response(content_type='application/json',

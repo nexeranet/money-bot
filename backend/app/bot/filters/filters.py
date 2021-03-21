@@ -6,12 +6,15 @@ def setCommands(commands: List = []):
     def check(message: Message):
         if message.is_bot_command() is False:
             return False
-        text = message['text'][1:]
-        print(text)
-        for i in len(commands):
-            print(i)
+        text = message.get_bot_command()
+        for i in range(len(commands)):
+            if(commands[i] == text):
+                return True
+        return False
     return check
 
 
 def setRegexp(regexp=None):
-    pass
+    def check(message: Message):
+        return False
+    return check

@@ -34,7 +34,7 @@ class Handlers:
 
     async def notify(self, message):
         for handler in self.handlers:
-            if(handler.check(message)):
-                handler.notify(message)
+            if(handler.check(message=message)):
+                await handler.notify(message=message)
                 return True
         return False
