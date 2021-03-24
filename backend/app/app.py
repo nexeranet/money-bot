@@ -3,6 +3,7 @@ from aiohttp import web
 import jinja2
 import aiohttp_jinja2
 from .routes import setup_routes
+from .db import *
 
 
 async def create_app():
